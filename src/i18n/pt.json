@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Desenvolvedor de Software",
+    "tagline": "Construindo soluções limpas e escaláveis.",
+    "cta": "Entre em contato"
+  },
+  "about": {
+    "heading": "Sobre Mim",
+    "text": "Sou um desenvolvedor apaixonado por criar software eficiente e elegante. Gosto de trabalhar em toda a stack, de serviços backend a interfaces de usuário polidas."
+  },
+  "skills": {
+    "heading": "Habilidades",
+    "languages": "Linguagens",
+    "frameworks": "Frameworks",
+    "tools": "Ferramentas"
+  },
+  "experience": {
+    "heading": "Experiência",
+    "roles": {
+      "software_developer": "Desenvolvedor de Software"
+    },
+    "bullets": {
+      "exp1_bullet1": "Desenvolveu e manteve aplicações web",
+      "exp1_bullet2": "Colaborou com equipes multifuncionais"
+    },
+    "present": "Presente"
+  },
+  "projects": {
+    "heading": "Projetos",
+    "project1": {
+      "name": "Projeto Um",
+      "description": "Uma descrição de projeto exemplo."
+    }
+  },
+  "contact": {
+    "heading": "Contato",
+    "email_label": "Email",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "Todos os direitos reservados."
+  }
+}

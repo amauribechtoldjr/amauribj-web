@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Software Developer",
+    "tagline": "Building clean, scalable solutions.",
+    "cta": "Get in touch"
+  },
+  "about": {
+    "heading": "About Me",
+    "text": "I'm a developer passionate about creating efficient and elegant software. I enjoy working across the stack, from backend services to polished user interfaces."
+  },
+  "skills": {
+    "heading": "Skills",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "tools": "Tools"
+  },
+  "experience": {
+    "heading": "Experience",
+    "roles": {
+      "software_developer": "Software Developer"
+    },
+    "bullets": {
+      "exp1_bullet1": "Developed and maintained web applications",
+      "exp1_bullet2": "Collaborated with cross-functional teams"
+    },
+    "present": "Present"
+  },
+  "projects": {
+    "heading": "Projects",
+    "project1": {
+      "name": "Project One",
+      "description": "A sample project description."
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "email_label": "Email",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
+}
