@@ -1,15 +1,13 @@
+import About from "@/components/Menus/About";
+import Contact from "@/components/Menus/Contact";
+import { ScrollIndicator } from "@/components/CustomScroll/ScrollIndicator";
+import { ScrollMark } from "@/components/CustomScroll/ScrollMark";
+import Experience from "@/components/Menus/Experience";
+import Navbar from "@/components/Layout/Navbar";
+import Projects from "@/components/Menus/Projects";
+import Skills from "@/components/Menus/Skills";
+import { getLanguage } from "@/i18n";
 import { useState } from "react";
-import { getLanguage } from "./i18n";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import { ScrollMark } from "./components/CustomScroll/ScrollMark";
-import { ScrollIndicator } from "./components/CustomScroll/ScrollIndicator";
 
 export default function App() {
   const [, setLang] = useState(getLanguage());
@@ -18,18 +16,14 @@ export default function App() {
     <>
       <ScrollMark />
       <ScrollIndicator />
-      <div className="min-h-screen bg-black">
-        <Navbar onLanguageChange={setLang} />
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <Navbar onLanguageChange={setLang} />
+      <main className="h-screen">
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
     </>
   );
 }

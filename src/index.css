@@ -7,4 +7,5 @@
 
 html {
   scroll-behavior: smooth;
+  @apply min-h-screen bg-black pt-52;
 }

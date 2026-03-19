@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { t, getLanguage, setLanguage } from "../i18n";
+import { t, getLanguage, setLanguage } from "../../i18n";
+import { MenuItem } from "@/constants/menus.constants";
 
 interface NavbarProps {
   onLanguageChange: (lang: "en" | "pt") => void;
 }
-
-const sectionIds = ["about", "skills", "experience", "projects", "contact"];
 
 export default function Navbar({ onLanguageChange }: NavbarProps) {
   const lang = getLanguage();
@@ -24,7 +23,7 @@ export default function Navbar({ onLanguageChange }: NavbarProps) {
       { rootMargin: "-40% 0px -55% 0px" },
     );
 
-    for (const id of sectionIds) {
+    for (const id of Object.values(MenuItem)) {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     }
@@ -65,7 +64,9 @@ export default function Navbar({ onLanguageChange }: NavbarProps) {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
                   className={`relative pb-1 transition-colors text-sm ${isActive ? "text-orange-400" : "text-slate-300 hover:text-accent"}`}
                 >
                   {link.label}
