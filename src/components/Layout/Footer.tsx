@@ -20,11 +20,17 @@ const FooterLink = ({ href, children }: FooterLinkProps) => {
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-primary/20 bg-background">
-      <div className="flex items-center justify-between px-6 py-4">
-        <span className="font-mono text-sm tracking-widest text-primary uppercase">
-          &copy; 2024 BJ_TERMINAL // ALL RIGHTS RESERVED
-        </span>
+    <footer className="border-t-2 border-primary/10 bg-background px-18 py-12">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4 divide-primary">
+          <span className="text-primary tracking-huge text-sm">
+            AMAURI BECHTOLD JUNIOR
+          </span>
+          <div className="h-4 w-1 bg-primary/50" />
+          <span className="font-mono tracking-widest text-primary/35 uppercase text-xs">
+            2026 // ALL RIGHTS RESERVED
+          </span>
+        </div>
         <div className="flex items-center gap-8">
           <FooterLink href={`${socialLinks.github}`}>GITHUB</FooterLink>
           <FooterLink href={socialLinks.linkedin}>LINKEDIN</FooterLink>

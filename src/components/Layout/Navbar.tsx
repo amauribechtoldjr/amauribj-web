@@ -13,8 +13,10 @@ export default function Navbar() {
 
 const NavIcons = () => {
   return (
-    <div className="bg-primary py-1 px-4">
-      <span className="font-display text-black font-bold">SYSTEM_ACTIVE</span>
+    <div className="bg-background py-1 px-4 border border-primary/20">
+      <span className="font-display text-primary tracking-wide">
+        SYSTEM_ACTIVE
+      </span>
     </div>
   );
 };

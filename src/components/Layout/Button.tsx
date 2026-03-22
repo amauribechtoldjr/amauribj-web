@@ -2,14 +2,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
   "px-10 py-2 font-bold tracking-wider font-mono flex items-center flex-wrap gap-2" +
-    " cursor-pointer",
+    " cursor-pointer relative",
   {
     variants: {
       variant: {
         emphasis:
-          "bg-primary text-background hover:-border-primary/50 hover:bg-primary/80",
+          "bg-primary text-background border-primary border hover:scanlines",
         outline:
-          "text-primary bg-background border border-primary hover:bg-primary hover:text-background",
+          "text-primary bg-background border border-primary hover:scanlines",
       },
     },
     defaultVariants: {
