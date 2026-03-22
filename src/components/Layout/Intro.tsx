@@ -1,7 +1,6 @@
 import { Button } from "@/components/Layout/Button";
 import { ContactIcon } from "@/components/Layout/Icons/ContactIcon";
 import { DownloadIcon } from "@/components/Layout/Icons/DownloadIcon";
-import { TitleSeparator } from "@/components/Layout/TitleSeparator";
 
 export const Intro = () => {
   return (
@@ -11,7 +10,10 @@ export const Intro = () => {
           SCALING <span className="text-primary">DIGITAL</span> PRODUCTS
         </span>
       </div>
-      <TitleSeparator title="SOFTWARE ENGINEER" />
+      <div className="flex gap-6 my-8 items-center">
+        <div className="w-40 h-1.5 bg-primary" />
+        <span className="tracking-huge text-2xl">SOFTWARE ENGINEER</span>
+      </div>
       <span className="text-offwhite/50 max-w-2/3">
         Senior Full-Stack Engineer building scalable systems with{" "}
         <span className="text-primary">TypeScript</span>,{" "}

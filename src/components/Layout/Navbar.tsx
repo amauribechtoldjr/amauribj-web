@@ -1,8 +1,8 @@
 export default function Navbar() {
   return (
     <nav className="h-16 bg-background border-b-2 border-primary/20 p-4 flex items-center justify-between">
-      <span className="font-display text-primary font-semibold tracking-widest">
-        SYS_PORTFOLIO_V1.0.1
+      <span className="text-primary tracking-huge text-sm">
+        AMAURI BECHTOLD JUNIOR
       </span>
       <div>
         <NavIcons />
