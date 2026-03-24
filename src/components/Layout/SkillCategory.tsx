@@ -10,7 +10,7 @@ type SkillCategoryProps = {
 
 export const SkillCategory = ({ category, items }: SkillCategoryProps) => {
   return (
-    <div className="flex flex-col gap-2 min-w-2/5 flex-1">
+    <div className="flex flex-col gap-2 flex-1">
       <span className="font-mono text-xs text-primary/60 tracking-widest">
         {`> ${category}`}
       </span>

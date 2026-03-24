@@ -31,7 +31,7 @@ export const Experience = ({ experience }: ExperienceProps) => {
             </div>
           </div>
         </div>
-        <span className="text-offwhite/70 mt-6 max-w-1/2">
+        <span className="text-offwhite/70 mt-6">
           Leading the core platform team in migrating monolith architecture to a
           event-driven mesh. Redesigning deployment pipelines resulting in a
           400% increase in release velocity. Implementing zero-trust security
@@ -42,7 +42,7 @@ export const Experience = ({ experience }: ExperienceProps) => {
   );
 };
 
-const experienceTimeVariants = cva("flex gap-2 font-mono text-xs w-1/3", {
+const experienceTimeVariants = cva("flex gap-2 font-mono text-xs w-1/5", {
   variants: {
     status: {
       active: "",

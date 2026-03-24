@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "px-10 py-2 font-bold tracking-wider font-mono flex items-center flex-wrap gap-2" +
+  "px-10 py-2 font-bold tracking-wider font-mono flex items-center justify-center flex-wrap gap-2" +
     " cursor-pointer relative",
   {
     variants: {
@@ -21,12 +21,14 @@ const buttonVariants = cva(
 type ButtonProps = VariantProps<typeof buttonVariants> & {
   children: React.ReactNode;
   leadingIcon?: React.ReactNode;
+  trailingIcon?: React.ReactNode;
   onClick: () => void;
 };
 
 export const Button = ({
   children,
   leadingIcon,
+  trailingIcon,
   variant,
   onClick,
 }: ButtonProps) => {
@@ -34,6 +36,7 @@ export const Button = ({
     <button onClick={onClick} className={buttonVariants({ variant })}>
       {leadingIcon}
       {children}
+      {trailingIcon}
     </button>
   );
 };
