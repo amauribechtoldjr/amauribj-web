@@ -1,4 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
+import { useEffect, useState } from "react";
 
 const buttonVariants = cva(
   "px-10 py-2 font-bold tracking-wider font-mono flex items-center justify-center flex-wrap gap-2" +
@@ -18,25 +19,50 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProps = VariantProps<typeof buttonVariants> & {
-  children: React.ReactNode;
-  leadingIcon?: React.ReactNode;
-  trailingIcon?: React.ReactNode;
-  onClick: () => void;
+const TypingDots = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prev) => (prev + 1) % 6);
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <span>{".".repeat(count + 1)}</span>;
 };
+
+type ButtonProps = VariantProps<typeof buttonVariants> &
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    leadingIcon?: React.ReactNode;
+    trailingIcon?: React.ReactNode;
+    isLoading?: boolean;
+  };
 
 export const Button = ({
   children,
   leadingIcon,
   trailingIcon,
   variant,
-  onClick,
+  isLoading,
+  ...rest
 }: ButtonProps) => {
   return (
-    <button onClick={onClick} className={buttonVariants({ variant })}>
-      {leadingIcon}
-      {children}
-      {trailingIcon}
+    <button
+      disabled={isLoading}
+      className={buttonVariants({ variant })}
+      {...rest}
+    >
+      {isLoading ? (
+        <TypingDots />
+      ) : (
+        <>
+          {leadingIcon}
+          {children}
+          {trailingIcon}
+        </>
+      )}
     </button>
   );
 };
