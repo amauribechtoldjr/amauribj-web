@@ -19,7 +19,7 @@ export const Experience = ({ experience }: ExperienceProps) => {
       <ExperienceTime experience={experience} />
       <div className="flex flex-col w-2/3">
         <div className="flex flex-col">
-          <span className="text-offwhite uppercase font-display -tracking-wide">
+          <span className="text-offwhite uppercase font-display -tracking-wide leading-4">
             {experience.position} // {experience.company}
           </span>
           <div className="flex items-center gap-2 mt-3 text-primary/80">
