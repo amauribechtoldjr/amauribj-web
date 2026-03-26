@@ -3,6 +3,7 @@
 @theme {
   /* ─── Colors: Core ─── */
   --color-primary: #ea580c;
+  /* --color-primary: green; */
   --color-off-primary: #7c2d12;
   --color-background: #080808;
   --color-secondary: #1b1b1b;
@@ -54,5 +55,79 @@ html {
   }
   to {
     background-position: 0 4px;
+  }
+}
+
+/* ─── Cyberpunk Broken Light Utility ─── */
+@utility cyber-flicker {
+  animation: cyber-flicker 4s step-end infinite;
+}
+
+@keyframes cyber-flicker {
+  0%,
+  2% {
+    opacity: 1;
+    color: var(--color-primary);
+    text-shadow: 0 0 6px var(--color-primary);
+  }
+  3%,
+  5% {
+    opacity: 0.4;
+    color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-shadow: none;
+  }
+  6%,
+  8% {
+    opacity: 1;
+    color: var(--color-primary);
+    text-shadow: 0 0 4px var(--color-primary);
+  }
+  9%,
+  40% {
+    opacity: 0.4;
+    color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-shadow: none;
+  }
+  41%,
+  42% {
+    opacity: 1;
+    color: var(--color-primary);
+    text-shadow: 0 0 8px var(--color-primary);
+  }
+  43%,
+  44% {
+    opacity: 0.3;
+    color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-shadow: none;
+  }
+  45%,
+  46% {
+    opacity: 1;
+    color: var(--color-primary);
+    text-shadow: 0 0 6px var(--color-primary);
+  }
+  47%,
+  48% {
+    opacity: 0.4;
+    color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-shadow: none;
+  }
+  49%,
+  95% {
+    opacity: 1;
+    color: var(--color-primary);
+    text-shadow: 0 0 6px var(--color-primary);
+  }
+  96%,
+  97% {
+    opacity: 0.3;
+    color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-shadow: none;
+  }
+  98%,
+  100% {
+    opacity: 0.4;
+    color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-shadow: none;
   }
 }

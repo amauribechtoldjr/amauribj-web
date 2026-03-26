@@ -1,3 +1,4 @@
+import resumePdf from "@/assets/resume.pdf";
 import { Button } from "@/components/Layout/Button";
 import { ContactIcon } from "@/components/Layout/Icons/ContactIcon";
 import { DownloadIcon } from "@/components/Layout/Icons/DownloadIcon";
@@ -23,20 +24,16 @@ export const Intro = () => {
         enable products to grow and perform at scale.
       </span>
       <div className="mt-8 flex items-center gap-4">
-        <Button
-          variant="emphasis"
-          onClick={() => null}
-          leadingIcon={<DownloadIcon />}
-        >
-          RESUME
-        </Button>
-        <Button
-          variant="outline"
-          onClick={() => null}
-          leadingIcon={<ContactIcon />}
-        >
-          CONTACT
-        </Button>
+        <a href={resumePdf} download="amauri-bechtold-junior-resume.pdf">
+          <Button variant="emphasis" leadingIcon={<DownloadIcon />}>
+            RESUME
+          </Button>
+        </a>
+        <a href="#contact">
+          <Button variant="outline" leadingIcon={<ContactIcon />}>
+            CONTACT
+          </Button>
+        </a>
       </div>
     </>
   );

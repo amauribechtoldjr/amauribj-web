@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 
 export const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
+
   const { sendEmail, status } = useEmail();
 
   const {
@@ -33,7 +34,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <PageSection>
+    <PageSection id="contact">
       <TitleSeparator title="CONTACT" />
       <form ref={formRef} onSubmit={handleSubmit(onSubmit)} method="post">
         <div className="flex mt-20 gap-16">
