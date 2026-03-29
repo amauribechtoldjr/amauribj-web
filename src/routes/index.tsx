@@ -4,7 +4,7 @@ import { MainLayout } from "@/components/Layout/MainLayout";
 import { createFileRoute } from "@tanstack/react-router";
 import { Experiences } from "@/components/Experiences";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
-import { Skills } from "@/components/Skills";
+import { AboutMe } from "@/components/AboutMe";
 
 export const Route = createFileRoute("/")({
   component: HomeComponent,
@@ -21,15 +21,15 @@ function HomeComponent() {
           <ProfileImage />
         </div>
       </section>
-      <div className="px-40 relative min-h-[130vh] flex items-center">
+      <div className="min-h-[130vh] flex items-center relative justify-between px-40">
         <div
           className="absolute inset-0 bg-primary"
           style={{
             clipPath: "polygon(0 15%, 100% 20%, 100% 80%, 0 75%)",
           }}
         />
-        <div className="relative flex flex-col items-center text-background">
-          <Skills />
+        <div className="flex flex-col items-center justify-center text-background flex-1">
+          <AboutMe />
         </div>
       </div>
       <div className="flex flex-col items-center mx-40">
