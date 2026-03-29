@@ -10,9 +10,13 @@ type PageSectionProps = {
 export const PageSection = forwardRef<HTMLDivElement, PageSectionProps>(
   ({ children, id, classNames }, ref) => {
     return (
-      <div className={twJoin("mb-40 w-full", classNames)} id={id} ref={ref}>
+      <div
+        className={twJoin("mb-40 w-full min-w-0", classNames)}
+        id={id}
+        ref={ref}
+      >
         {children}
       </div>
     );
-  }
+  },
 );
