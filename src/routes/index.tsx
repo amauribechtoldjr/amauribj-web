@@ -28,11 +28,11 @@ function HomeComponent() {
             clipPath: "polygon(0 15%, 100% 20%, 100% 80%, 0 75%)",
           }}
         />
-        <div className="flex flex-col items-center justify-center text-background flex-1">
+        <div className="flex flex-col items-center justify-center text-background flex-1 z-10">
           <AboutMe />
         </div>
       </div>
-      <div className="flex flex-col items-center mx-40">
+      <div className="flex flex-col items-center mx-40 relative">
         <Experiences />
         <ContactForm />
       </div>
