@@ -16,13 +16,14 @@ export const Experiences = () => {
       gsap.utils.toArray<HTMLElement>(".experience-item").forEach((item) => {
         gsap.fromTo(
           item,
-          { x: -1000 },
+          { y: 200, opacity: 0 },
           {
-            x: 0,
+            y: 0,
+            opacity: 1,
             duration: 0.9,
             scrollTrigger: {
               trigger: item,
-              start: "top 100%",
+              start: "top 120%",
               end: "bottom 100%",
               scrub: 1,
             },

@@ -9,31 +9,33 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 export const AboutMe = () => {
   const container = useRef(null);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      container.current,
-      {
-        x: -5000,
-      },
-      {
-        x: 0,
-        duration: 0.7,
-        scrollTrigger: {
-          trigger: ".skills",
-          start: "top 100%",
-          end: "bottom 100%",
-          scrub: 1,
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".box",
+        { x: -400, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.9,
+          scrollTrigger: {
+            trigger: ".box",
+            start: "top 100%",
+            end: "bottom 100%",
+            scrub: 1,
+          },
         },
-      },
-    );
-  });
+      );
+    },
+    { scope: container },
+  );
 
   return (
     <PageSection
-      classNames="flex items-center gap-40 justify-between skills"
+      classNames="flex items-center gap-40 justify-between"
       ref={container}
     >
-      <div className="flex flex-col gap-8 flex-1">
+      <div className="flex flex-col gap-8 box">
         <span className="text-6xl font-bold font-display">ABOUT ME</span>
         <span className="text-background">
           Senior Full-Stack Engineer building scalable systems with{" "}
@@ -44,7 +46,7 @@ export const AboutMe = () => {
           reliable solutions that enable products to grow and perform at scale.
         </span>
       </div>
-      <div className="flex-1 border border-black h-125"></div>
+      <div className="border-4 border-black h-125 overflow-hidden min-w-100"></div>
     </PageSection>
   );
 };
