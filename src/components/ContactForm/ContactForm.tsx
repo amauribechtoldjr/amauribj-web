@@ -15,6 +15,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
 
+// TODO: reset form after send
+// TODO: success confirmation message
+
 export const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
 

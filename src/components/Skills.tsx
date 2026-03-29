@@ -1,47 +1,20 @@
 import { PageSection } from "@/components/Layout/PageSection";
-import { SkillCategory } from "@/components/Layout/SkillCategory";
-import { TitleSeparator } from "@/components/Layout/TitleSeparator";
 
 export const Skills = () => {
   return (
-    <PageSection>
-      <TitleSeparator title="CORE CAPABILITIES" />
-      <div className="flex gap-12 mt-20 justify-between">
-        <SkillCategory
-          category="LANGUAGES & FRAMEWORKS"
-          items={[
-            { name: "Javascript", value: "5 yrs" },
-            { name: "Typescript", value: "5 yrs" },
-            { name: "React", value: "10 yrs" },
-            { name: "Node.js", value: "5 yrs" },
-          ]}
-        />
-        <SkillCategory
-          category="ARCHITECTURE"
-          items={[
-            { name: "Microservices", value: "5 yrs" },
-            { name: "Cloud Native", value: "4 yrs" },
-            { name: "Distributed Systems", value: "3 yrs" },
-          ]}
-        />
-        <SkillCategory
-          category="ARCHITECTURE"
-          items={[
-            { name: "Microservices", value: "5 yrs" },
-            { name: "Cloud Native", value: "4 yrs" },
-            { name: "Distributed Systems", value: "3 yrs" },
-          ]}
-        />
-        <SkillCategory
-          category="LANGUAGES & FRAMEWORKS"
-          items={[
-            { name: "Javascript", value: "5 yrs" },
-            { name: "Typescript", value: "5 yrs" },
-            { name: "Cloud Native", value: "4 yrs" },
-            { name: "Distributed Systems", value: "3 yrs" },
-          ]}
-        />
+    <PageSection classNames="flex items-center gap-10" id="skills">
+      <div className="flex flex-col gap-8 flex-1">
+        <span className="text-6xl font-bold font-display">ABOUT ME</span>
+        <span className="text-background max-w-3/4">
+          Senior Full-Stack Engineer building scalable systems with{" "}
+          <span className="font-bold">TypeScript</span>,{" "}
+          <span className="font-bold">React</span>, and{" "}
+          <span className="font-bold">Node.js</span>. <br />
+          <br /> From frontend architecture to backend services, I create
+          reliable solutions that enable products to grow and perform at scale.
+        </span>
       </div>
+      <div className="flex-2"></div>
     </PageSection>
   );
 };

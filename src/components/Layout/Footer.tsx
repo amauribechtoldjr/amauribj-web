@@ -20,7 +20,7 @@ const FooterLink = ({ href, children }: FooterLinkProps) => {
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-primary/10 bg-background px-18 py-12">
+    <footer className="border-t border-primary/35 bg-background px-18 py-12">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4 divide-primary">
           <span className="text-primary tracking-huge text-sm">

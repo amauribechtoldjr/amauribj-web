@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="h-16 bg-background border-b border-primary/20 p-4 flex items-center justify-between">
+    <nav className="h-16 bg-background border-b border-primary/35 p-4 flex items-center justify-between">
       <span className="text-primary tracking-huge text-sm">
         AMAURI BECHTOLD JUNIOR
       </span>
