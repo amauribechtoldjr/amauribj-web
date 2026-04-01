@@ -1,52 +1,45 @@
+import { GithubIcon } from "@/components/Layout/Icons/GithubIcon";
 import { PageSection } from "@/components/Layout/PageSection";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
-import { useRef } from "react";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export const AboutMe = () => {
-  const container = useRef(null);
-
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        ".box",
-        { x: -400, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.9,
-          scrollTrigger: {
-            trigger: ".box",
-            start: "top 100%",
-            end: "bottom 100%",
-            scrub: 1,
-          },
-        },
-      );
-    },
-    { scope: container },
-  );
-
   return (
-    <PageSection
-      classNames="flex items-center gap-40 justify-between"
-      ref={container}
-    >
-      <div className="flex flex-col gap-8 box">
-        <span className="text-6xl font-bold font-display">ABOUT ME</span>
-        <span className="text-background">
-          Senior Full-Stack Engineer building scalable systems with{" "}
-          <span className="font-bold">TypeScript</span>,{" "}
-          <span className="font-bold">React</span>, and{" "}
-          <span className="font-bold">Node.js</span>. <br />
-          <br /> From frontend architecture to backend services, I create
-          reliable solutions that enable products to grow and perform at scale.
+    <PageSection classNames="flex items-center gap-10 justify-between">
+      <div className="h-125 overflow-hidden flex flex-col items-center">
+        <span className="text-2xl font-mono font-extrabold mt-4 -tracking-widest mb-4">
+          Frontend Development
+        </span>
+        <GithubIcon className="size-10" />
+        <span className="mt-20">
+          I help you build user-friendly interfaces that are not only visually
+          appealing but also performant and accessible. With a focus on React
+          and modern frontend technologies, I create seamless user experiences
+          that drive engagement and satisfaction.
         </span>
       </div>
-      <div className="border-4 border-black h-125 overflow-hidden min-w-100"></div>
+      <div className="h-125 overflow-hidden flex flex-col items-center">
+        <span className="text-2xl font-mono font-extrabold mt-4 -tracking-widest mb-4">
+          Backend Development
+        </span>
+        <GithubIcon className="size-10" />
+        <span className="mt-20">
+          I help you build robust and scalable backend systems with Node.js,
+          Python, and other technologies. I focus on creating efficient, secure,
+          and maintainable solutions that power modern applications and
+          services.
+        </span>
+      </div>
+      <div className="h-125 overflow-hidden flex flex-col items-center">
+        <span className="text-2xl font-mono font-extrabold mt-4 -tracking-widest mb-4">
+          Frontend Development
+        </span>
+        <GithubIcon className="size-10" />
+        <span className="mt-20">
+          I help you build user-friendly interfaces that are not only visually
+          appealing but also performant and accessible. With a focus on React
+          and modern frontend technologies, I create seamless user experiences
+          that drive engagement and satisfaction.
+        </span>
+      </div>
     </PageSection>
   );
 };

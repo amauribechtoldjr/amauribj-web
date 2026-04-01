@@ -23,9 +23,10 @@ export const Experiences = () => {
             duration: 0.9,
             scrollTrigger: {
               trigger: item,
-              start: "top 120%",
-              end: "bottom 100%",
-              scrub: 1,
+              start: "top 70%",
+              end: () => `+=${item.offsetHeight + 100}`,
+              toggleActions: "play none none none",
+              scrub: 2,
             },
           },
         );
@@ -35,7 +36,7 @@ export const Experiences = () => {
   );
 
   return (
-    <PageSection classNames="experience" ref={container}>
+    <PageSection ref={container}>
       <div className="mb-40">
         <TitleSeparator title="DEPLOYMENT HISTORY" />
       </div>
