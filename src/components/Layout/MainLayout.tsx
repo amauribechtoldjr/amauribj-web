@@ -1,15 +1,14 @@
+import { CornerLines } from "@/components/Layout/CornerLines";
+
 type MainLayoutProps = {
   children: React.ReactNode;
 };
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <section className="flex-auto min-w-0 overflow-y-auto bg-background text-primary relative">
+    <section className="flex min-h-screen flex-col min-w-0 overflow-y-auto bg-background text-primary relative">
       {children}
-      <div className="absolute w-px h-64 bg-primary/25 top-5 left-5 z-10" />
-      <div className="absolute w-64 h-px bg-primary/25 top-5 left-5 z-0" />
-      <div className="absolute w-px h-56 bg-primary/15 top-10 left-10 z-10" />
-      <div className="absolute w-56 h-px bg-primary/15 top-10 left-10 z-0" />
+      <CornerLines />
     </section>
   );
 };

@@ -18,16 +18,14 @@
 }
 
 /* ─── Base Styles ─── */
+body {
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 
   @apply min-h-screen font-body text-primary;
-}
-
-*,
-*::before,
-*::after {
-  border-radius: 0 !important;
 }
 
 /* ─── Scanline Overlay Utility ─── */
