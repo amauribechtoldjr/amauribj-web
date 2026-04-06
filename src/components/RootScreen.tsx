@@ -11,7 +11,7 @@ export const RootScreen = () => {
   return (
     <>
       <MainLayout>
-        <PageSection className="flex items-center gap-16 min-h-[75vh] pt-40">
+        <PageSection className="flex items-center gap-16 min-h-[80vh] pt-40">
           <div className="flex-2 flex flex-col">
             <Intro />
           </div>
@@ -23,7 +23,7 @@ export const RootScreen = () => {
           <div
             className="absolute inset-0 bg-primary"
             style={{
-              clipPath: "polygon(0 12.5%, 100% 17.5%, 100% 87.5%, 0 82.5%)",
+              clipPath: "polygon(0 15%, 100% 15%, 100% 85%, 0 85%)",
             }}
           />
           <AboutMe />
