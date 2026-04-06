@@ -1,5 +1,4 @@
 import { Experience } from "@/components/Layout/Experience";
-import { PageSection } from "@/components/Layout/PageSection";
 import { TitleSeparator } from "@/components/Layout/TitleSeparator";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -23,10 +22,10 @@ export const Experiences = () => {
             duration: 0.9,
             scrollTrigger: {
               trigger: item,
-              start: "top 70%",
+              start: "top 110%",
               end: () => `+=${item.offsetHeight + 100}`,
-              toggleActions: "play none none none",
-              scrub: 2,
+              toggleActions: "play reset none none",
+              scrub: 3,
             },
           },
         );
@@ -36,11 +35,11 @@ export const Experiences = () => {
   );
 
   return (
-    <PageSection ref={container}>
+    <div className="mb-80">
       <div className="mb-40">
-        <TitleSeparator title="DEPLOYMENT HISTORY" />
+        <TitleSeparator title="EXPERIENCE" />
       </div>
-      <div className="flex flex-col gap-16 mt-20">
+      <div className="flex flex-col gap-20" ref={container}>
         <div className="experience-item">
           <Experience
             experience={{
@@ -52,7 +51,7 @@ export const Experiences = () => {
             }}
           />
         </div>
-        <div className="w-full h-px bg-primary/20" />
+        {/* <div className="w-full h-px bg-primary/20" /> */}
         <div className="experience-item">
           <Experience
             experience={{
@@ -65,7 +64,7 @@ export const Experiences = () => {
             }}
           />
         </div>
-        <div className="w-full h-px bg-primary/20" />
+        {/* <div className="w-full h-px bg-primary/20" /> */}
         <div className="experience-item">
           <Experience
             experience={{
@@ -78,7 +77,7 @@ export const Experiences = () => {
             }}
           />
         </div>
-        <div className="w-full h-px bg-primary/20" />
+        {/* <div className="w-full h-px bg-primary/20" /> */}
         <div className="experience-item">
           <Experience
             experience={{
@@ -91,6 +90,6 @@ export const Experiences = () => {
           />
         </div>
       </div>
-    </PageSection>
+    </div>
   );
 };

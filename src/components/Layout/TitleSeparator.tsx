@@ -4,10 +4,8 @@ type TitleSeparatorProps = {
 
 export const TitleSeparator = ({ title }: TitleSeparatorProps) => {
   return (
-    <div className="flex gap-6 my-8 items-center w-full justify-center">
-      <div className="grow h-px bg-primary/20" />
-      <span className="tracking-huge text-2xl">{title}</span>
-      <div className="grow h-px bg-primary/20" />
+    <div className="flex gap-6 my-8 items-center w-full">
+      <span className="text-7xl font-display">{title}</span>
     </div>
   );
 };
