@@ -6,7 +6,7 @@ type MainLayoutProps = {
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <section className="flex min-h-screen flex-col min-w-0 overflow-y-auto bg-background text-primary relative">
+    <section className="min-w-0 bg-background text-primary">
       {children}
       <CornerLines />
     </section>

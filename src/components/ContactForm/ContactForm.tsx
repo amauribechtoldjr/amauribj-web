@@ -7,7 +7,6 @@ import { ContactIcon } from "@/components/Layout/Icons/ContactIcon";
 import { GithubIcon } from "@/components/Layout/Icons/GithubIcon";
 import { Input } from "@/components/Layout/Input";
 import { Link } from "@/components/Layout/Link";
-import { PageSection } from "@/components/Layout/PageSection";
 import { TextArea } from "@/components/Layout/TextArea";
 import { TitleSeparator } from "@/components/Layout/TitleSeparator";
 import { useEmail } from "@/hooks/useEmail";
@@ -37,15 +36,15 @@ export const ContactForm = () => {
   };
 
   return (
-    <PageSection id="contact">
+    <div className="mb-80">
       <TitleSeparator title="CONTACT" />
       <form ref={formRef} onSubmit={handleSubmit(onSubmit)} method="post">
         <div className="flex mt-20 gap-16">
           <div className="flex-1 flex flex-col gap-6">
-            <span className="text-offwhite text-3xl uppercase -tracking-wide font-display font-bold">
+            <span className="text-offwhite font-semibold text-3xl font-mono uppercase">
               Establish Connection
             </span>
-            <span className="text-offwhite/70">
+            <span className="text-offwhite/70 min-w-0 tracking-wider leading-7">
               Ready to integrate new technologies into your architectural
               framework? Send a transmission and our systems will respond within
               12 standard hours.
@@ -59,7 +58,12 @@ export const ContactForm = () => {
               </Link>
               <Link
                 href="https://github.com/amauribechtoldjr"
-                leadingIcon={<GithubIcon color="text-primary" />}
+                leadingIcon={
+                  <GithubIcon
+                    color="text-primary"
+                    className="size-4 text-primary"
+                  />
+                }
                 target="_blank"
               >
                 github.com/amauribechtoldjr
@@ -100,6 +104,6 @@ export const ContactForm = () => {
           </div>
         </div>
       </form>
-    </PageSection>
+    </div>
   );
 };

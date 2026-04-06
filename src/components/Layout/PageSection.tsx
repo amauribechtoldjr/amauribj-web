@@ -3,20 +3,16 @@ import { twJoin } from "tailwind-merge";
 
 type PageSectionProps = {
   children: React.ReactNode;
-  classNames?: string;
+  className?: string;
   id?: string;
 };
 
 export const PageSection = forwardRef<HTMLDivElement, PageSectionProps>(
-  ({ children, id, classNames }, ref) => {
+  ({ children, id, className }, ref) => {
     return (
-      <div
-        className={twJoin("mb-40 w-full min-w-0", classNames)}
-        id={id}
-        ref={ref}
-      >
+      <section className={twJoin("min-w-0 px-40", className)} id={id} ref={ref}>
         {children}
-      </div>
+      </section>
     );
   },
 );
