@@ -19,7 +19,7 @@ export const RootScreen = () => {
             <ProfileImage />
           </div>
         </PageSection>
-        <div className="min-h-screen flex items-center relative justify-between mt-10">
+        <div className="min-h-screen flex items-center relative justify-between mt-10 overflow-x-hidden">
           <div
             className="absolute inset-0 bg-primary"
             style={{
