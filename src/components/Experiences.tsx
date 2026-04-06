@@ -24,8 +24,7 @@ export const Experiences = () => {
               trigger: item,
               start: "top 110%",
               end: () => `+=${item.offsetHeight + 100}`,
-              toggleActions: "play reset none none",
-              scrub: 3,
+              scrub: 1,
             },
           },
         );
