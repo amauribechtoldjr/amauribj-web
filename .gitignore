@@ -1,5 +1,10 @@
+# bundle
 node_modules
 dist
+
+# extensions
 .vscode/*
 !.vscode/extensions.json
+
+# environment
 .env
