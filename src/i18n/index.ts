@@ -1,33 +1,21 @@
-import en from './en.json'
-import pt from './pt.json'
+import i18next from "i18next";
+import en from "./en.json";
+import pt from "./pt.json";
+import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next";
 
-type Language = 'en' | 'pt'
-
-const translations: Record<Language, Record<string, unknown>> = { en, pt }
-
-let currentLang: Language = (localStorage.getItem('lang') as Language) || 'en'
-let currentTranslations: Record<string, unknown> = translations[currentLang]
-
-export function t(key: string): string {
-  const keys = key.split('.')
-  let value: unknown = currentTranslations
-  for (const k of keys) {
-    if (value && typeof value === 'object') {
-      value = (value as Record<string, unknown>)[k]
-    } else {
-      return key
-    }
-  }
-  return typeof value === 'string' ? value : key
-}
-
-export function setLanguage(lang: Language): Language {
-  currentLang = lang
-  currentTranslations = translations[lang]
-  localStorage.setItem('lang', lang)
-  return lang
-}
-
-export function getLanguage(): Language {
-  return currentLang
-}
+i18next
+  .use(I18nextBrowserLanguageDetector)
+  .use(initReactI18next)
+  .init({
+    debug: true,
+    fallbackLng: "en",
+    resources: {
+      en: {
+        translation: en,
+      },
+      pt: {
+        translation: pt,
+      },
+    },
+  });

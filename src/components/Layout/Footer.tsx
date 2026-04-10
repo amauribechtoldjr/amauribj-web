@@ -1,4 +1,4 @@
-import { socialLinks } from "@/data/me";
+import { socialLinks } from "@/data/profile";
 
 type FooterLinkProps = {
   href: string;

@@ -11,8 +11,8 @@ export const RootScreen = () => {
   return (
     <>
       <MainLayout>
-        <PageSection className="flex items-center gap-16 min-h-[80vh] pt-40">
-          <div className="flex-2 flex flex-col">
+        <PageSection className="flex items-center gap-16 min-h-[80vh] pt-40 justify-center px-70">
+          <div className="flex-1">
             <Intro />
           </div>
           <div className="flex-1 flex justify-end">

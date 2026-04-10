@@ -5,12 +5,14 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "@/components/Layout/Link";
-import { socialLinks } from "@/data/me";
+import { socialLinks } from "@/data/profile";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export const AboutMe = () => {
   const container = useRef(null);
+  const { t } = useTranslation();
 
   useGSAP(() => {
     gsap.fromTo(
@@ -34,13 +36,21 @@ export const AboutMe = () => {
   return (
     <div className="flex z-10 pl-40 gap-20">
       <div className="flex flex-col flex-2 gap-10 ">
-        <span className="text-7xl font-display text-background">ABOUT ME</span>
+        <span className="text-7xl font-display text-background">
+          {t("aboutMe.title")}
+        </span>
         <div className="pr-40">
-          <span className="min-w-0 text-background font-medium text-lg tracking-wider leading-7">
-            I help you build user-friendly interfaces that are not only visually
-            appealing but also performant and accessible. With a focus on React
-            and modern frontend technologies, I create seamless user experiences
-            that drive engagement and satisfaction.
+          <span className="min-w-0 text-background font-medium text-md tracking-wider leading-7">
+            <span className="font-extrabold">{t("aboutMe.description.softwareEngineer")}</span>
+            {t("aboutMe.description.withExperience")}
+            <span className="font-extrabold">{t("aboutMe.description.fullStack")}</span>
+            {t("aboutMe.description.focusingOn")}
+            <span className="font-extrabold">{t("aboutMe.description.javascript")}</span>
+            {t("aboutMe.description.since2012")}
+            <span className="font-extrabold">{t("aboutMe.description.monolithic")}</span>
+            {t("aboutMe.description.and")}
+            <span className="font-extrabold">{t("aboutMe.description.microservices")}</span>
+            {t("aboutMe.description.architectures")}
           </span>
         </div>
         <div className="flex items-center gap-4">
@@ -61,44 +71,49 @@ export const AboutMe = () => {
         ref={container}
       >
         <SkillItem>
-          <SkillTitle>FRONTEND</SkillTitle>
+          <SkillTitle>{t("aboutMe.skills.frontend.title")}</SkillTitle>
           <SkillList>
-            <span>Typescript</span>
-            <span>Javascript</span>
-            <span>React</span>
-            <span>Nextjs</span>
-            <span>HTML/CSS</span>
-            <span>SSG</span>
-            <span>Prisma</span>
-            <span>TanStack Query</span>
-            <span>GSAP</span>
+            <span>{t("aboutMe.skills.frontend.typescript")}</span>
+            <span>{t("aboutMe.skills.frontend.javascript")}</span>
+            <span>{t("aboutMe.skills.frontend.react")}</span>
+            <span>{t("aboutMe.skills.frontend.reactNative")}</span>
+            <span>{t("aboutMe.skills.frontend.htmlCss")}</span>
+            <span>{t("aboutMe.skills.frontend.ssg")}</span>
+            <span>{t("aboutMe.skills.frontend.tailwind")}</span>
+            <span>{t("aboutMe.skills.frontend.gsap")}</span>
+            <span>{t("aboutMe.skills.frontend.reactQuery")}</span>
+            <span>{t("aboutMe.skills.frontend.webVitals")}</span>
+            <span>{t("aboutMe.skills.frontend.microFrontend")}</span>
+            <span>{t("aboutMe.skills.frontend.storybook")}</span>
+            <span>{t("aboutMe.skills.frontend.zustand")}</span>
           </SkillList>
         </SkillItem>
         <SkillItem>
-          <SkillTitle>BACKEND</SkillTitle>
+          <SkillTitle>{t("aboutMe.skills.backend.title")}</SkillTitle>
           <SkillList>
-            <span>Nodejs</span>
-            <span>Express</span>
-            <span>GO</span>
-            <span>Rest APIs</span>
-            <span>GraphQL</span>
-            <span>Redis</span>
-            <span>DesignSystem</span>
-            <span>MySQL</span>
-            <span>PostgreSQL</span>
+            <span>{t("aboutMe.skills.backend.node")}</span>
+            <span>{t("aboutMe.skills.backend.express")}</span>
+            <span>{t("aboutMe.skills.backend.microservices")}</span>
+            <span>{t("aboutMe.skills.backend.graphql")}</span>
+            <span>{t("aboutMe.skills.backend.redis")}</span>
+            <span>{t("aboutMe.skills.backend.python")}</span>
+            <span>{t("aboutMe.skills.backend.django")}</span>
+            <span>{t("aboutMe.skills.backend.postgresql")}</span>
+            <span>{t("aboutMe.skills.backend.mysql")}</span>
+            <span>{t("aboutMe.skills.backend.restAPI")}</span>
           </SkillList>
         </SkillItem>
         <SkillItem>
-          <SkillTitle>INFRA & TOOLS</SkillTitle>
+          <SkillTitle>{t("aboutMe.skills.tools.title")}</SkillTitle>
           <SkillList>
-            <span>UNIX</span>
-            <span>Docker</span>
-            <span>CI/CD</span>
-            <span>Figma</span>
-            <span>Jira</span>
-            <span>IA</span>
-            <span>AWS</span>
-            <span>CLI</span>
+            <span>{t("aboutMe.skills.tools.git")}</span>
+            <span>{t("aboutMe.skills.tools.docker")}</span>
+            <span>{t("aboutMe.skills.tools.aws")}</span>
+            <span>{t("aboutMe.skills.tools.ciCd")}</span>
+            <span>{t("aboutMe.skills.tools.testing")}</span>
+            <span>{t("aboutMe.skills.tools.datadog")}</span>
+            <span>{t("aboutMe.skills.tools.optimization")}</span>
+            <span>{t("aboutMe.skills.tools.designSystem")}</span>
           </SkillList>
         </SkillItem>
       </div>
