@@ -1,4 +1,3 @@
-import { ContactForm } from "@/components/ContactForm/ContactForm";
 import { Experiences } from "@/components/Experiences";
 import Footer from "@/components/Layout/Footer";
 import { Intro } from "@/components/Layout/Intro";
@@ -6,6 +5,7 @@ import { MainLayout } from "@/components/Layout/MainLayout";
 import { ProfileImage } from "@/components/Layout/ProfileImage";
 import { PageSection } from "@/components/Layout/PageSection";
 import { AboutMe } from "@/components/AboutMe";
+import { Contact } from "@/components/Contact";
 
 export const RootScreen = () => {
   return (
@@ -32,7 +32,7 @@ export const RootScreen = () => {
           <Experiences />
         </PageSection>
         <PageSection>
-          <ContactForm />
+          <Contact />
         </PageSection>
       </MainLayout>
       <Footer />

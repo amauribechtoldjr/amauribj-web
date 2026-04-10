@@ -6,9 +6,9 @@ type LinkProps = {
 
 export const Link = ({ href, children, leadingIcon, ...rest }: LinkProps) => {
   return (
-    <a href={href} className="flex items-center gap-2" {...rest}>
+    <a href={href} className="flex items-center gap-2 max-w-min" {...rest}>
       {leadingIcon}
-      <span className="cursor-pointer font-mono tracking-wider underline underline-offset-2 text-lg">
+      <span className="cursor-pointer font-mono tracking-wider underline underline-offset-2 text-lg ">
         {children}
       </span>
     </a>

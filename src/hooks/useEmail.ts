@@ -7,17 +7,18 @@ import emailjs from "@emailjs/browser";
 import { useCallback, useState } from "react";
 
 type EmailStatus = "idle" | "loading" | "success" | "error";
-
-type UseEmailReturn = {
-  sendEmail: (name: string, email: string, content: string) => Promise<void>;
-  status: EmailStatus;
+type SendEmailProps = {
+  name: string;
+  email: string;
+  content: string;
+  onSuccess?: () => void;
 };
 
-export const useEmail = (): UseEmailReturn => {
+export const useEmail = () => {
   const [status, setStatus] = useState<EmailStatus>("idle");
 
   const sendEmail = useCallback(
-    async (name: string, email: string, content: string) => {
+    async ({ name, email, content, onSuccess }: SendEmailProps) => {
       setStatus("loading");
 
       try {
@@ -29,6 +30,7 @@ export const useEmail = (): UseEmailReturn => {
         );
 
         setStatus("success");
+        onSuccess?.();
       } catch {
         setStatus("error");
       }
