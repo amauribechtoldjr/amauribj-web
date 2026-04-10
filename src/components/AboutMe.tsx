@@ -133,7 +133,7 @@ export const AboutMe = () => {
 
 const SkillList = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center gap-3 flex-wrap text text-offwhite">
+    <div className="flex items-center gap-3 flex-wrap text text-offwhite/70">
       {children}
     </div>
   );

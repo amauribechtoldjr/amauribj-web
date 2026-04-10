@@ -126,11 +126,11 @@
     "taglineEnd": "I'm ready when you are.",
     "form": {
       "nameLabel": "NAME",
-      "namePlaceholder": "GUEST USER",
+      "namePlaceholder": "user",
       "emailLabel": "EMAIL",
-      "emailPlaceholder": "USER@DOMAIN.COM",
+      "emailPlaceholder": "user@domain.com",
       "contentLabel": "CONTENT",
-      "contentPlaceholder": "GUEST MESSAGE",
+      "contentPlaceholder": "message",
       "submit": "SEND MESSAGE"
     }
   },

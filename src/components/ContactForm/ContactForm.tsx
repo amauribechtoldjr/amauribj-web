@@ -1,5 +1,8 @@
 import {
   contactFormSchema,
+  CONTENT_MAX_LENGTH,
+  EMAIL_MAX_LENGTH,
+  NAME_MAX_LENGTH,
   type ContactFormDef,
 } from "@/components/ContactForm/ContactForm.schema";
 import { Button } from "@/components/Layout/Button";
@@ -7,6 +10,7 @@ import { ContactIcon } from "@/components/Layout/Icons/ContactIcon";
 import { GithubIcon } from "@/components/Layout/Icons/GithubIcon";
 import { LinkedInIcon } from "@/components/Layout/Icons/LinkedInIcon";
 import { Input } from "@/components/Layout/Input";
+import { Label } from "@/components/Layout/Label";
 import { Link } from "@/components/Layout/Link";
 import { TextArea } from "@/components/Layout/TextArea";
 import { TitleSeparator } from "@/components/Layout/TitleSeparator";
@@ -42,10 +46,10 @@ export const ContactForm = () => {
 
   return (
     <div className="mb-80">
-      <TitleSeparator title={t("contact.title")} />
       <form ref={formRef} onSubmit={handleSubmit(onSubmit)} method="post">
-        <div className="flex mt-20 gap-16">
+        <div className="flex mt-20 gap-16 flex-wrap">
           <div className="flex-1 flex flex-col gap-6">
+            <TitleSeparator title={t("contact.title")} />
             <span className="text-offwhite font-semibold text-3xl font-mono uppercase">
               {t("contact.subtitle")}
             </span>
@@ -86,26 +90,35 @@ export const ContactForm = () => {
             </div>
           </div>
           <div className="flex-1">
-            <div className="border border-primary/20 flex flex-col p-6 gap-6">
-              <Input
-                {...register("name")}
-                label={t("contact.form.nameLabel")}
-                placeholder={t("contact.form.namePlaceholder")}
-                invalid={!!errors["name"]}
-              />
-              <Input
-                {...register("email")}
-                label={t("contact.form.emailLabel")}
-                placeholder={t("contact.form.emailPlaceholder")}
-                invalid={!!errors["email"]}
-              />
-              <TextArea
-                {...register("content")}
-                label={t("contact.form.contentLabel")}
-                placeholder={t("contact.form.contentPlaceholder")}
-                rows={5}
-                invalid={!!errors["content"]}
-              />
+            <div className="flex flex-col p-6 gap-6">
+              <div className="flex flex-col gap-2">
+                <Label>{t("contact.form.nameLabel")}</Label>
+                <Input
+                  {...register("name")}
+                  placeholder={t("contact.form.namePlaceholder")}
+                  invalid={!!errors["name"]}
+                  maxLength={NAME_MAX_LENGTH}
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <Label>{t("contact.form.emailLabel")}</Label>
+                <Input
+                  {...register("email")}
+                  placeholder={t("contact.form.emailPlaceholder")}
+                  invalid={!!errors["email"]}
+                  maxLength={EMAIL_MAX_LENGTH}
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <Label>{t("contact.form.contentLabel")}</Label>
+                <TextArea
+                  {...register("content")}
+                  placeholder={t("contact.form.contentPlaceholder")}
+                  rows={5}
+                  invalid={!!errors["content"]}
+                  maxLength={CONTENT_MAX_LENGTH}
+                />
+              </div>
               <Button
                 variant={"emphasis"}
                 onClick={() => null}
