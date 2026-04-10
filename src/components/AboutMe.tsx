@@ -41,15 +41,25 @@ export const AboutMe = () => {
         </span>
         <div className="pr-40">
           <span className="min-w-0 text-background font-medium text-md tracking-wider leading-7">
-            <span className="font-extrabold">{t("aboutMe.description.softwareEngineer")}</span>
+            <span className="font-extrabold">
+              {t("aboutMe.description.softwareEngineer")}
+            </span>
             {t("aboutMe.description.withExperience")}
-            <span className="font-extrabold">{t("aboutMe.description.fullStack")}</span>
+            <span className="font-extrabold">
+              {t("aboutMe.description.fullStack")}
+            </span>
             {t("aboutMe.description.focusingOn")}
-            <span className="font-extrabold">{t("aboutMe.description.javascript")}</span>
+            <span className="font-extrabold">
+              {t("aboutMe.description.javascript")}
+            </span>
             {t("aboutMe.description.since2012")}
-            <span className="font-extrabold">{t("aboutMe.description.monolithic")}</span>
+            <span className="font-extrabold">
+              {t("aboutMe.description.monolithic")}
+            </span>
             {t("aboutMe.description.and")}
-            <span className="font-extrabold">{t("aboutMe.description.microservices")}</span>
+            <span className="font-extrabold">
+              {t("aboutMe.description.microservices")}
+            </span>
             {t("aboutMe.description.architectures")}
           </span>
         </div>
@@ -123,7 +133,9 @@ export const AboutMe = () => {
 
 const SkillList = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center gap-3 flex-wrap text">{children}</div>
+    <div className="flex items-center gap-3 flex-wrap text text-offwhite">
+      {children}
+    </div>
   );
 };
 

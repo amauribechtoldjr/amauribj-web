@@ -5,19 +5,24 @@ import {
 import { Button } from "@/components/Layout/Button";
 import { ContactIcon } from "@/components/Layout/Icons/ContactIcon";
 import { GithubIcon } from "@/components/Layout/Icons/GithubIcon";
+import { LinkedInIcon } from "@/components/Layout/Icons/LinkedInIcon";
 import { Input } from "@/components/Layout/Input";
 import { Link } from "@/components/Layout/Link";
 import { TextArea } from "@/components/Layout/TextArea";
 import { TitleSeparator } from "@/components/Layout/TitleSeparator";
 import { useEmail } from "@/hooks/useEmail";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 // TODO: reset form after send
 // TODO: success confirmation message
 
 export const ContactForm = () => {
+  const { t } = useTranslation();
+
   const formRef = useRef<HTMLFormElement>(null);
 
   const { sendEmail, status } = useEmail();
@@ -37,17 +42,15 @@ export const ContactForm = () => {
 
   return (
     <div className="mb-80">
-      <TitleSeparator title="CONTACT" />
+      <TitleSeparator title={t("contact.title")} />
       <form ref={formRef} onSubmit={handleSubmit(onSubmit)} method="post">
         <div className="flex mt-20 gap-16">
           <div className="flex-1 flex flex-col gap-6">
             <span className="text-offwhite font-semibold text-3xl font-mono uppercase">
-              Establish Connection
+              {t("contact.subtitle")}
             </span>
             <span className="text-offwhite/70 min-w-0 tracking-wider leading-7">
-              Ready to integrate new technologies into your architectural
-              framework? Send a transmission and our systems will respond within
-              12 standard hours.
+              {t("contact.tagline")} <br /> {t("contact.taglineEnd")}
             </span>
             <div className="flex flex-col gap-3">
               <Link
@@ -68,26 +71,38 @@ export const ContactForm = () => {
               >
                 github.com/amauribechtoldjr
               </Link>
+              <Link
+                href="https://www.linkedin.com/in/amauribechtoldjr/"
+                leadingIcon={
+                  <LinkedInIcon
+                    color="text-primary"
+                    className="size-4 text-primary"
+                  />
+                }
+                target="_blank"
+              >
+                linkedin.com/in/amauribechtoldjr
+              </Link>
             </div>
           </div>
           <div className="flex-1">
             <div className="border border-primary/20 flex flex-col p-6 gap-6">
               <Input
                 {...register("name")}
-                label="NAME"
-                placeholder="GUEST USER"
+                label={t("contact.form.nameLabel")}
+                placeholder={t("contact.form.namePlaceholder")}
                 invalid={!!errors["name"]}
               />
               <Input
                 {...register("email")}
-                label="EMAIL"
-                placeholder="USER@DOMAIN.COM"
+                label={t("contact.form.emailLabel")}
+                placeholder={t("contact.form.emailPlaceholder")}
                 invalid={!!errors["email"]}
               />
               <TextArea
                 {...register("content")}
-                label="CONTENT"
-                placeholder="GUEST MESSAGE"
+                label={t("contact.form.contentLabel")}
+                placeholder={t("contact.form.contentPlaceholder")}
                 rows={5}
                 invalid={!!errors["content"]}
               />
@@ -98,7 +113,7 @@ export const ContactForm = () => {
                 type="submit"
                 isLoading={status === "loading"}
               >
-                SEND MESSAGE
+                {t("contact.form.submit")}
               </Button>
             </div>
           </div>
