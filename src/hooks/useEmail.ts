@@ -2,7 +2,7 @@ import {
   EMAILJS_PUBLIC_KEY,
   EMAILJS_SERVICE_ID,
   EMAILJS_TEMPLATE_ID,
-} from "@/config";
+} from "@/config/envinronment";
 import emailjs from "@emailjs/browser";
 import { useCallback, useState } from "react";
 

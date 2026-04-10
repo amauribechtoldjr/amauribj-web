@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "title": {
+      "build": "BUILD",
+      "scale": "SCALE",
+      "impact": "IMPACT"
+    },
+    "jobTitle": "SOFTWARE ENGINEER",
+    "resume": "RESUME",
+    "contact": "CONTACT"
+  },
+  "aboutMe": {
+    "title": "ABOUT ME",
+    "description": {
+      "softwareEngineer": "Software Engineer",
+      "withExperience": " with extensive experience in ",
+      "fullStack": "Full Stack",
+      "focusingOn": " development, focusing on ",
+      "javascript": "JavaScript",
+      "since2012": " since January 2012. Proficient in designing and delivering scalable, resilient applications within the JavaScript ecosystem, working across both ",
+      "monolithic": "monolithic",
+      "and": " and ",
+      "microservices": "microservices",
+      "architectures": " architectures. Experienced throughout the entire development lifecycle, including planning, system design, development, testing, as well as monitoring and alerting."
+    },
+    "skills": {
+      "frontend": {
+        "title": "FRONTEND",
+        "typescript": "TypeScript",
+        "javascript": "JavaScript",
+        "react": "React",
+        "reactNative": "React Native",
+        "htmlCss": "HTML/CSS",
+        "ssg": "SSG",
+        "tailwind": "Tailwind",
+        "gsap": "GSAP",
+        "reactQuery": "TanStack",
+        "webVitals": "Web Vitals",
+        "microFrontend": "Micro-Frontend",
+        "storybook": "Storybook",
+        "zustand": "Zustand"
+      },
+      "backend": {
+        "title": "BACKEND",
+        "node": "Node.js",
+        "express": "Express",
+        "microservices": "Microservices",
+        "graphql": "GraphQL",
+        "redis": "Redis",
+        "python": "Python",
+        "django": "Django",
+        "postgresql": "PostgreSQL",
+        "mysql": "MySQL",
+        "restAPI": "REST API"
+      },
+      "tools": {
+        "title": "INFRA & TOOLS",
+        "git": "Git",
+        "docker": "Docker",
+        "aws": "AWS",
+        "ciCd": "CI/CD",
+        "testing": "Testing",
+        "datadog": "Datadog",
+        "optimization": "Optimization",
+        "designSystem": "Design Systems"
+      }
+    }
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "location": "LOCATION:",
+    "present": "PRESENT",
+    "companies": {
+      "sigmaMd": {
+        "firstYear": "Oct 2023",
+        "position": "Senior Software Engineer",
+        "location": "California, USA",
+        "description": "Increased client acquisition, driving a 25% growth in company revenue, by delivering and maintaining core billing features including invoicing, memberships, enrollments, and reporting on the SigmaMD platform using React and Node.js."
+      },
+      "solides": {
+        "firstYear": "Oct 2021",
+        "lastYear": "Aug 2023",
+        "position": "Senior Software Engineer",
+        "location": "Sao Paulo, Brazil",
+        "description1": "Improved developer experience and deployment efficiency by reducing release time from ~1 hour to under 5 minutes, enhancing the Node.js API and building a CLI with Commander.js to automate the single-spa deployment workflow, while maintaining the micro frontend architecture and orchestrator.",
+        "description2": "Improved performance and engineering standards across teams, driving consistent reductions in regressions, by leading 5+ internal workshops on micro frontend architecture and React optimization over 2 years."
+      },
+      "bornlogic": {
+        "firstYear": "Dec 2020",
+        "lastYear": "Sep 2021",
+        "position": "Senior Software Engineer",
+        "location": "Sao Paulo, Brazil",
+        "description1": "Built and scaled a reusable design system, improving overall website performance metrics by over 20% through codebase refactoring and component standardization with React, Storybook, lazy loading strategies, and memoization, while partnering with and mentoring the design team to drive adoption of the system.",
+        "description2": "Led the development of new product features, establishing a strong code review culture that reduced production bugs and regressions by at least 10%, while driving consistent standards for performance, user experience, and accessibility across the team using React, JavaScript, and TypeScript."
+      },
+      "eureca": {
+        "firstYear": "Sep 2018",
+        "lastYear": "Nov 2020",
+        "position": "Senior Software Engineer",
+        "location": "Sao Paulo, Brazil",
+        "description1": "Designed and built the EuFest landing page from scratch, which attracted over 1,000 new subscribers for an online workshop series of Eureca using React, Tailwind and Gatsby for server-side generation.",
+        "description2": "Improved user experience and scalability of the Eureca platform, reducing FCP and LCP by 20% creating the design system library with a strong focus on accessibility and performance using React, Design System, Storybook and Tailwind."
+      },
+      "linx": {
+        "firstYear": "Dec 2016",
+        "lastYear": "Aug 2018",
+        "position": "Software Engineer",
+        "location": "Santa Catarina, Brazil",
+        "description": "Improved operational efficiency for kitchens serving 5,000+ employees daily by building and maintaining three fast-food applications with React, React Native and Electron."
+      },
+      "unimestre": {
+        "firstYear": "Jan 2012",
+        "lastYear": "Dec 2016",
+        "position": "Junior Engineer",
+        "location": "Santa Catarina, Brazil",
+        "description1": "Improved reliability and user experience for a product used by 500k+ students by delivering new features and fixing critical bugs across finance, academic, and library systems using PHP, jQuery, Delphi and MySQL.",
+        "description2": "Improved performance of academic reporting workflows, reducing MySQL query execution time by at least 40% by optimizing database functions and views through indexing strategies and query refactoring."
+      }
+    }
+  },
+  "contact": {
+    "title": "CONTACT",
+    "description": "Feel free to reach out if you want to connect, collaborate on a project",
+    "subtitle": "MAKE THE FIRST MOVE.",
+    "tagline": "Big ideas need solid execution.",
+    "taglineEnd": "I'm ready when you are.",
+    "form": {
+      "nameLabel": "NAME",
+      "namePlaceholder": "GUEST USER",
+      "emailLabel": "EMAIL",
+      "emailPlaceholder": "USER@DOMAIN.COM",
+      "contentLabel": "CONTENT",
+      "contentPlaceholder": "GUEST MESSAGE",
+      "submit": "SEND MESSAGE"
+    }
+  },
+  "footer": {
+    "rights": "2026 // ALL RIGHTS RESERVED",
+    "sourceCode": "SOURCE CODE"
+  }
+}
