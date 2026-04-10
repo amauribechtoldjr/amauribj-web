@@ -3,20 +3,14 @@
 @theme {
   /* ─── Colors: Core ─── */
   --color-primary: #ea580c;
-  /* --color-primary: green; */
   --color-off-primary: #7c2d12;
   --color-background: #080808;
   --color-secondary: #1b1b1b;
   --color-offwhite: #e2e2e2;
 
-  /* TODO: remove unnused fonts!! */
-
   /* ─── Fonts ─── */
-  /* --font-display: "Space Grotesk", sans-serif; */
   --font-display: "Rubik Mono One", monospace;
   --font-body: "Inter", sans-serif;
-  /* --font-body: "Oswald", sans-serif; */
-  /* --font-mono: "JetBrains Mono", monospace; */
   --font-mono: "Oswald", sans-serif;
 
   --tracking-huge: 0.2em;
