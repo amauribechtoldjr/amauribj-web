@@ -10,20 +10,20 @@ import { ContactIcon } from "@/components/Layout/Icons/ContactIcon";
 import { Input } from "@/components/Layout/Input";
 import { Label } from "@/components/Layout/Label";
 import { TextArea } from "@/components/Layout/TextArea";
+
 import { useEmail } from "@/hooks/useEmail";
+import { useToast } from "@/hooks/useToast";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-// TODO: success confirmation message
-
 export const ContactForm = () => {
   const { t } = useTranslation();
 
   const formRef = useRef<HTMLFormElement>(null);
-
+  const { showToast } = useToast();
   const { sendEmail, status } = useEmail();
 
   const {
@@ -42,6 +42,10 @@ export const ContactForm = () => {
       email: data.email,
       content: data.content,
       onSuccess: () => {
+        showToast({
+          message: t("contact.notifications.success"),
+          variant: "success",
+        });
         reset();
       },
     });

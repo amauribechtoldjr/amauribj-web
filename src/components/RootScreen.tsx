@@ -1,23 +1,17 @@
 import { Experiences } from "@/components/Experiences";
 import Footer from "@/components/Layout/Footer";
-import { Intro } from "@/components/Layout/Intro";
 import { MainLayout } from "@/components/Layout/MainLayout";
-import { ProfileImage } from "@/components/Layout/ProfileImage";
 import { PageSection } from "@/components/Layout/PageSection";
 import { AboutMe } from "@/components/AboutMe";
 import { Contact } from "@/components/Contact";
+import { Hero } from "@/components/Hero";
 
 export const RootScreen = () => {
   return (
     <>
       <MainLayout>
         <PageSection className="flex items-center gap-16 min-h-[80vh] pt-40 justify-center px-70">
-          <div className="flex-1">
-            <Intro />
-          </div>
-          <div className="flex-1 flex justify-end">
-            <ProfileImage />
-          </div>
+          <Hero />
         </PageSection>
         <div className="min-h-screen flex items-center relative justify-between mt-10 overflow-x-hidden">
           <div

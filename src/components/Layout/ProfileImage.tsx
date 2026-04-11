@@ -1,4 +1,4 @@
-import amauriBj from "@/assets/profile.png";
+import amauriBj from "/profile.png";
 
 export const ProfileImage = () => {
   return (

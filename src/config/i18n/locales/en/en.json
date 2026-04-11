@@ -132,6 +132,10 @@
       "contentLabel": "CONTENT",
       "contentPlaceholder": "message",
       "submit": "SEND MESSAGE"
+    },
+    "notifications": {
+      "success": "Message sent with success.",
+      "error": "Something failed, please try again later"
     }
   },
   "footer": {
