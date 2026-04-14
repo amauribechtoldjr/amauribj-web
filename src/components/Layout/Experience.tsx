@@ -8,23 +8,21 @@ type ExperienceProps = {
 
 export const Experience = ({ experience }: ExperienceProps) => {
   return (
-    <div className="flex">
+    <div className="flex flex-col gap-4">
       <ExperienceTime experience={experience} />
-      <div className="flex flex-col w-2/3">
-        <div className="flex flex-col">
-          <span className="text-offwhite uppercase font-semibold text-3xl font-mono leading-5">
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          <span className="text-offwhite uppercase font-semibold text-2xl font-mono">
             {experience.position} // {experience.company}
           </span>
-          <div className="flex items-center gap-2 mt-3 text-primary/80 font-bold">
+          <div className="flex items-center gap-2 text-primary/80 font-bold">
             <span className="uppercase text-xs">
-              {t("experience.location")} {experience.location}
+              {t("experience.location")} {experience.location} (
+              {experience.remote ? "REMOTE" : "ON-SITE"})
             </span>
-            <div className="self-start border-l px-2 py-0.5 text-xs shrink-0 min-w-0">
-              {experience.remote ? "REMOTE" : "ON-SITE"}
-            </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 mt-6">
+        <div className="flex flex-col gap-4">
           {experience.description.map((desc, index) => (
             <span
               className="text-offwhite/70 min-w-0 tracking-wider leading-7 hyphens-none"
@@ -39,7 +37,7 @@ export const Experience = ({ experience }: ExperienceProps) => {
   );
 };
 
-const experienceTimeVariants = cva("flex gap-2 font-mono text-sm w-1/5", {
+const experienceTimeVariants = cva("flex-1 flex gap-2 font-mono text-sm", {
   variants: {
     status: {
       active: "",

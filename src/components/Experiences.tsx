@@ -1,11 +1,11 @@
 import { Experience } from "@/components/Layout/Experience";
-import { TitleSeparator } from "@/components/Layout/TitleSeparator";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { ExperienceType } from "@/types/experience.types";
 import { useTranslation } from "react-i18next";
+import { mediaQuerySizes } from "@/hooks/useMediaQuery";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -14,22 +14,26 @@ export const Experiences = () => {
 
   useGSAP(
     () => {
-      gsap.utils.toArray<HTMLElement>(".experience-item").forEach((item) => {
-        gsap.fromTo(
-          item,
-          { y: 200, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.9,
-            scrollTrigger: {
-              trigger: item,
-              start: "top 110%",
-              end: () => `+=${item.offsetHeight + 100}`,
-              scrub: 1,
+      const mm = gsap.matchMedia();
+
+      mm.add(mediaQuerySizes.md, () => {
+        gsap.utils.toArray<HTMLElement>(".experience-item").forEach((item) => {
+          gsap.fromTo(
+            item,
+            { y: 200, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.9,
+              scrollTrigger: {
+                trigger: item,
+                start: "top 110%",
+                end: () => `+=${item.offsetHeight + 100}`,
+                scrub: 1,
+              },
             },
-          },
-        );
+          );
+        });
       });
     },
     { scope: container },
@@ -103,9 +107,11 @@ export const Experiences = () => {
   ];
 
   return (
-    <div className="mb-80">
-      <div className="mb-40">
-        <TitleSeparator title={t("experience.title")} />
+    <section className="p-10">
+      <div className="mb-20">
+        <span className="text-primary text-4xl font-display">
+          {t("experience.title")}
+        </span>
       </div>
       <div className="flex flex-col gap-20" ref={container}>
         {experiences.map((exp, index) => (
@@ -114,6 +120,6 @@ export const Experiences = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

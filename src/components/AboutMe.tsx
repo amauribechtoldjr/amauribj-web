@@ -7,39 +7,45 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "@/components/Layout/Link";
 import { socialLinks } from "@/data/profile";
 import { useTranslation } from "react-i18next";
+import { mediaQuerySizes } from "@/hooks/useMediaQuery";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export const AboutMe = () => {
   const container = useRef(null);
+
   const { t } = useTranslation();
 
   useGSAP(() => {
-    gsap.fromTo(
-      container.current,
-      { x: 700, opacity: 0 },
-      {
-        x: 20,
-        opacity: 1,
-        duration: 0.9,
-        scrollTrigger: {
-          trigger: ".skills",
-          start: "top 100%",
-          end: "bottom 100%",
-          toggleActions: "play reset none none",
-          scrub: 1,
+    const mm = gsap.matchMedia();
+
+    mm.add(mediaQuerySizes.md, () => {
+      gsap.fromTo(
+        container.current,
+        { x: 700, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.9,
+          scrollTrigger: {
+            trigger: ".skills",
+            start: "top 100%",
+            end: "bottom 100%",
+            toggleActions: "play reset none none",
+            scrub: 1,
+          },
         },
-      },
-    );
+      );
+    });
   });
 
   return (
-    <div className="flex z-10 pl-40 gap-20">
-      <div className="flex flex-col flex-2 gap-10 ">
-        <span className="text-7xl font-display text-background">
+    <section className="flex px-10 gap-10 items-center flex-wrap justify-center bg-primary p-10 mt-20">
+      <div className="flex flex-col flex-2 gap-10">
+        <span className="text-4xl font-display text-background">
           {t("aboutMe.title")}
         </span>
-        <div className="pr-40">
+        <div>
           <span className="min-w-0 text-background font-medium text-md tracking-wider leading-7">
             <span className="font-extrabold">
               {t("aboutMe.description.softwareEngineer")}
@@ -77,7 +83,7 @@ export const AboutMe = () => {
         </div>
       </div>
       <div
-        className="flex flex-col gap-16 bg-background text-primary p-10 w-180 pr-20 skills"
+        className="flex flex-col gap-16 bg-background text-primary p-4 py-10 skills max-h-200"
         ref={container}
       >
         <SkillItem>
@@ -127,20 +133,24 @@ export const AboutMe = () => {
           </SkillList>
         </SkillItem>
       </div>
-    </div>
+    </section>
   );
 };
 
 const SkillList = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center gap-3 flex-wrap text text-offwhite/70">
+    <div className="flex items-center gap-2 flex-wrap text text-offwhite/70">
       {children}
     </div>
   );
 };
 
 const SkillTitle = ({ children }: { children: React.ReactNode }) => {
-  return <span className="font-semibold text-3xl font-mono">{children}</span>;
+  return (
+    <span className="font-semibold text-2xl font-mono text-primary/80">
+      {children}
+    </span>
+  );
 };
 
 const SkillItem = ({ children }: { children: React.ReactNode }) => {

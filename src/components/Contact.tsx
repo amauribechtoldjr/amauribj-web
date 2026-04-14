@@ -1,6 +1,5 @@
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 import { Link } from "@/components/Layout/Link";
-import { TitleSeparator } from "@/components/Layout/TitleSeparator";
 import { socialLinks } from "@/data/profile";
 
 import { useTranslation } from "react-i18next";
@@ -9,11 +8,11 @@ export const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="mb-80" id="contact">
-      <div className="flex mt-20 gap-16 flex-wrap">
+    <section className="flex justify-center p-10" id="contact">
+      <div className="flex mt-20 gap-16 flex-wrap flex-1 justify-center">
         <div className="flex-1 flex flex-col gap-6">
-          <TitleSeparator title={t("contact.title")} />
-          <span className="text-offwhite font-semibold text-3xl font-mono uppercase">
+          <span className="text-4xl font-display">{t("contact.title")}</span>
+          <span className="text-offwhite font-semibold text-2xl font-mono uppercase">
             {t("contact.subtitle")}
           </span>
           <span className="text-offwhite/70 min-w-0 tracking-wider leading-7">
@@ -35,6 +34,6 @@ export const Contact = () => {
           <ContactForm />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
