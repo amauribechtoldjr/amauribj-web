@@ -21,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
 
-  @apply text-xs;
+  @apply text-xs sm:text-sm;
 }
 
 html {

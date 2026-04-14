@@ -12,7 +12,7 @@ const FooterLink = ({ href, children }: FooterLinkProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="font-mono text-xs tracking-widest text-offwhite uppercase"
+      className="font-mono text-xs tracking-widest text-offwhite uppercase underline"
     >
       {children}
     </a>

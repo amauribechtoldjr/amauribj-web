@@ -107,9 +107,9 @@ export const Experiences = () => {
   ];
 
   return (
-    <section className="p-10">
+    <section className="p-10 sm:p-16">
       <div className="mb-20">
-        <span className="text-primary text-4xl font-display">
+        <span className="text-primary text-4xl sm:text-5xl font-display">
           {t("experience.title")}
         </span>
       </div>

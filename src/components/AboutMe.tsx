@@ -19,7 +19,7 @@ export const AboutMe = () => {
   useGSAP(() => {
     const mm = gsap.matchMedia();
 
-    mm.add(mediaQuerySizes.md, () => {
+    mm.add(mediaQuerySizes.lg, () => {
       gsap.fromTo(
         container.current,
         { x: 700, opacity: 0 },
@@ -40,9 +40,9 @@ export const AboutMe = () => {
   });
 
   return (
-    <section className="flex px-10 gap-10 items-center flex-wrap justify-center bg-primary p-10 mt-20">
-      <div className="flex flex-col flex-2 gap-10">
-        <span className="text-4xl font-display text-background">
+    <section className="flex gap-10 lg:gap-20 items-center flex-col lg:flex-row justify-center bg-primary p-10 lg:p-16 sm:p-16 mt-20">
+      <div className="flex flex-col flex-1 gap-10">
+        <span className="text-4xl sm:text-5xl font-display text-background">
           {t("aboutMe.title")}
         </span>
         <div>
@@ -83,8 +83,8 @@ export const AboutMe = () => {
         </div>
       </div>
       <div
-        className="flex flex-col gap-16 bg-background text-primary p-4 py-10 skills max-h-200"
-        ref={container}
+        className="flex flex-1 flex-col gap-16 lg:gap-10 bg-background text-primary p-4 py-6 skills min-w-0 overflow-hidden"
+        // ref={container}
       >
         <SkillItem>
           <SkillTitle>{t("aboutMe.skills.frontend.title")}</SkillTitle>
@@ -139,7 +139,7 @@ export const AboutMe = () => {
 
 const SkillList = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center gap-2 flex-wrap text text-offwhite/70">
+    <div className="flex items-center gap-2 flex-wrap text-offwhite/70">
       {children}
     </div>
   );
