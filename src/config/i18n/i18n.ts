@@ -1,9 +1,8 @@
 import i18n from "i18next";
 import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
-import enLang from "./locales/en/en.json";
-
-// TODO: add portuguese translation
+import enLang from "./locales/en/us.json";
+import ptLang from "./locales/pt/br.json";
 
 i18n
   .use(I18nextBrowserLanguageDetector)
@@ -15,8 +14,8 @@ i18n
       en: {
         translation: enLang,
       },
-      // pt: {
-      //   translation: ptLang,
-      // },
+      pt: {
+        translation: ptLang,
+      },
     },
   });

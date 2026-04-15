@@ -18,7 +18,10 @@ export const Experience = ({ experience }: ExperienceProps) => {
           <div className="flex items-center gap-2 text-primary/80 font-bold">
             <span className="uppercase text-xs">
               {t("experience.location")} {experience.location} (
-              {experience.remote ? "REMOTE" : "ON-SITE"})
+              {experience.remote
+                ? t("experience.remote")
+                : t("experience.inOffice")}
+              )
             </span>
           </div>
         </div>

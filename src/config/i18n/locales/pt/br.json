@@ -1,0 +1,146 @@
+{
+  "hero": {
+    "title": {
+      "build": "CONSTRUA",
+      "scale": "ESCALE",
+      "impact": "IMPACTE"
+    },
+    "jobTitle": "ENGENHEIRO DE SOFTWARE",
+    "resume": "CURRÍCULO",
+    "contact": "CONTATO"
+  },
+  "aboutMe": {
+    "title": "SOBRE MIM",
+    "description": {
+      "softwareEngineer": "Engenheiro de software",
+      "withExperience": " com extensiva experiência em desenvolvimento ",
+      "fullStack": "Full Stack",
+      "focusingOn": ", focado em ",
+      "javascript": "JavaScript",
+      "since2012": " desde Janeiro de 2012. Proficiente em projetar e entregar aplicações escaláveis e resilientes dentro do ecossistema Javascript, trabalhando em arquiteturas de ",
+      "monolithic": "monolíticos",
+      "and": " e/ou ",
+      "microservices": "microserviços",
+      "architectures": ". Experiência em todo o ciclo de desenvolvimento, incluindo planejamento, arquitetura de software, desenvolvimento, testes, além de monitoramento e alertas."
+    },
+    "skills": {
+      "frontend": {
+        "title": "FRONTEND",
+        "typescript": "TypeScript",
+        "javascript": "JavaScript",
+        "react": "React",
+        "reactNative": "React Native",
+        "htmlCss": "HTML/CSS",
+        "ssg": "SSG",
+        "tailwind": "Tailwind",
+        "gsap": "GSAP",
+        "reactQuery": "TanStack",
+        "webVitals": "Web Vitals",
+        "microFrontend": "Micro-Frontend",
+        "storybook": "Storybook",
+        "zustand": "Zustand"
+      },
+      "backend": {
+        "title": "BACKEND",
+        "node": "Node.js",
+        "express": "Express",
+        "microservices": "Microserviços",
+        "graphql": "GraphQL",
+        "redis": "Redis",
+        "python": "Python",
+        "django": "Django",
+        "postgresql": "PostgreSQL",
+        "mysql": "MySQL",
+        "restAPI": "REST API"
+      },
+      "tools": {
+        "title": "INFRA & FERRAMENTAS",
+        "git": "Git",
+        "docker": "Docker",
+        "aws": "AWS",
+        "ciCd": "CI/CD",
+        "testing": "Testes",
+        "datadog": "Datadog",
+        "optimization": "Otimizações",
+        "designSystem": "Arquitetura de software"
+      }
+    }
+  },
+  "experience": {
+    "title": "EXPERIÊNCIA",
+    "location": "LOCALIZAÇÃO:",
+    "present": "PRESENTE",
+    "remote": "REMOTO",
+    "inOffice": "ESCRITÓRIO",
+    "companies": {
+      "sigmaMd": {
+        "firstYear": "Out 2023",
+        "position": "Engenheiro de software sênior",
+        "location": "Califórnia, EUA",
+        "description": "Aumento na aquisição de clientes, impulsionando um crescimento de 25% na receita da empresa, através da entrega e manutenção de funcionalidades essenciais de faturamento, incluindo emissão de notas fiscais, cadastros de membros, inscrições e relatórios na plataforma SigmaMD, utilizando React e Node.js."
+      },
+      "solides": {
+        "firstYear": "Out 2021",
+        "lastYear": "Ago 2023",
+        "position": "Engenheiro de software sênior",
+        "location": "São Paulo, Brasil",
+        "description1": "Melhorei a experiência do desenvolvedor e a eficiência do release reduzindo o tempo de deploy de aproximadamente 1 hora para menos de 5 minutos, aprimorando a API do Node.js e criando uma CLI com Commander.js para automatizar o fluxo de trabalho de deploy de um único SPA, também dava manutenção á arquitetura de micro frontend e o orquestrador.",
+        "description2": "Melhorei a performance e os padrões de engenharia entre equipes, reduzindo consistentemente regressões, ao liderar mais de 5 workshops internos sobre arquitetura de micro frontends e otimização em React ao longo de 2 anos."
+      },
+      "bornlogic": {
+        "firstYear": "Dez 2020",
+        "lastYear": "Set 2021",
+        "position": "Engenheiro de software sênior",
+        "location": "São Paulo, Brasil",
+        "description1": "Construí e escalei um design system reutilizável, melhorando as métricas gerais de performance do site em mais de 20% por meio de refatoração do código e padronização de componentes com React, Storybook, estratégias de lazy loading e memoização do React, além de colaborar e orientar o time de design para impulsionar a adoção do sistema.",
+        "description2": "Liderei o desenvolvimento de novos recursos do produto, estabelecendo uma forte cultura de revisão de código que reduziu bugs e regressões em produção em pelo menos 10%, ao mesmo tempo em que impulsionou padrões consistentes de desempenho, experiência do usuário e acessibilidade em toda a equipe, utilizando React, JavaScript e TypeScript."
+      },
+      "eureca": {
+        "firstYear": "Set 2018",
+        "lastYear": "Nov 2020",
+        "position": "Engenheiro de software sênior",
+        "location": "São Paulo, Brasil",
+        "description1": "Projetei e desenvolvi do zero a landing page do EuFest, que atraiu mais de 1.000 novos inscritos para uma série de workshops online da Eureca, utilizando React, Tailwind e Gatsby para SSG.",
+        "description2": "Melhorei a experiência do usuário e a escalabilidade da plataforma Eureca, reduzindo o FCP e o LCP em 20% ao criar a biblioteca de design system com forte foco em acessibilidade e performance, utilizando React, Storybook e Tailwind."
+      },
+      "linx": {
+        "firstYear": "Dez 2016",
+        "lastYear": "Ago 2018",
+        "position": "Desenvolvedor pleno",
+        "location": "Santa Catarina, Brasil",
+        "description": "Melhorei a eficiência operacional de cozinhas que atendiam mais de 5.000 funcionários diariamente, ao desenvolver e manter três aplicações de fast-food utilizando React, React Native e Electron."
+      },
+      "unimestre": {
+        "firstYear": "Jan 2012",
+        "lastYear": "Dez 2016",
+        "position": "Desenvolvedor junior",
+        "location": "Santa Catarina, Brasil",
+        "description1": "Melhorei a confiabilidade e a experiência do usuário de um produto utilizado por mais de 500 mil estudantes, ao entregar novas funcionalidades e corrigir bugs críticos nos sistemas financeiro, acadêmico e de biblioteca, utilizando PHP, jQuery, Delphi e MySQL.",
+        "description2": "Melhorei a performance dos relatórios de boletins acadêmicos, reduzindo o tempo de execução de queries no MySQL em pelo menos 40% ao otimizar funções e views do banco de dados por meio de estratégias de indexação e refatoração de queries."
+      }
+    }
+  },
+  "contact": {
+    "title": "CONTATO",
+    "subtitle": "FAÇA SUA JOGADA.",
+    "tagline": "Grandes ideias precisam de uma execução sólida.",
+    "taglineEnd": "Estou pronto quando você estiver.  ",
+    "form": {
+      "nameLabel": "NOME",
+      "namePlaceholder": "user",
+      "emailLabel": "EMAIL",
+      "emailPlaceholder": "user@dominio.com",
+      "contentLabel": "CONTEÚDO",
+      "contentPlaceholder": "mensagem",
+      "submit": "ENVIAR MENSAGEM"
+    },
+    "notifications": {
+      "success": "Mensagem enviada com sucesso.",
+      "error": "Ocorreu um erro. Tente novamente mais tarde."
+    }
+  },
+  "footer": {
+    "rights": "2026 // TODOS OS DIREITOS RESERVADOS",
+    "sourceCode": "CÓDIGO FONTE"
+  }
+}

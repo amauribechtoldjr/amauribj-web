@@ -1,16 +1,16 @@
 {
   "hero": {
     "title": {
-      "build": "CONSTRUA",
-      "scale": "ESCALE",
-      "impact": "IMPACTE"
+      "build": "BUILD",
+      "scale": "SCALE",
+      "impact": "IMPACT"
     },
-    "jobTitle": "ENGENHEIRO DE SOFTWARE",
-    "resume": "CURRÍCULO",
-    "contact": "CONTATO"
+    "jobTitle": "SOFTWARE ENGINEER",
+    "resume": "RESUME",
+    "contact": "CONTACT"
   },
   "aboutMe": {
-    "title": "SOBRE MIM",
+    "title": "ABOUT ME",
     "description": {
       "softwareEngineer": "Software Engineer",
       "withExperience": " with extensive experience in ",
@@ -70,26 +70,28 @@
     "title": "EXPERIENCE",
     "location": "LOCATION:",
     "present": "PRESENT",
+    "remote": "REMOTE",
+    "inOffice": "IN-OFFICE",
     "companies": {
       "sigmaMd": {
         "firstYear": "Oct 2023",
-        "position": "Software Engineer",
+        "position": "Senior Software Engineer",
         "location": "California, USA",
         "description": "Increased client acquisition, driving a 25% growth in company revenue, by delivering and maintaining core billing features including invoicing, memberships, enrollments, and reporting on the SigmaMD platform using React and Node.js."
       },
       "solides": {
         "firstYear": "Oct 2021",
         "lastYear": "Aug 2023",
-        "position": "Software Engineer",
-        "location": "California, USA",
+        "position": "Senior Software Engineer",
+        "location": "Sao Paulo, Brazil",
         "description1": "Improved developer experience and deployment efficiency by reducing release time from ~1 hour to under 5 minutes, enhancing the Node.js API and building a CLI with Commander.js to automate the single-spa deployment workflow, while maintaining the micro frontend architecture and orchestrator.",
         "description2": "Improved performance and engineering standards across teams, driving consistent reductions in regressions, by leading 5+ internal workshops on micro frontend architecture and React optimization over 2 years."
       },
       "bornlogic": {
         "firstYear": "Dec 2020",
         "lastYear": "Sep 2021",
-        "position": "Software Engineer",
-        "location": "California, USA",
+        "position": "Senior Software Engineer",
+        "location": "Sao Paulo, Brazil",
         "description1": "Built and scaled a reusable design system, improving overall website performance metrics by over 20% through codebase refactoring and component standardization with React, Storybook, lazy loading strategies, and memoization, while partnering with and mentoring the design team to drive adoption of the system.",
         "description2": "Led the development of new product features, establishing a strong code review culture that reduced production bugs and regressions by at least 10%, while driving consistent standards for performance, user experience, and accessibility across the team using React, JavaScript, and TypeScript."
       },
@@ -117,5 +119,28 @@
         "description2": "Improved performance of academic reporting workflows, reducing MySQL query execution time by at least 40% by optimizing database functions and views through indexing strategies and query refactoring."
       }
     }
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "MAKE YOUR MOVE.",
+    "tagline": "Big ideas need solid execution.",
+    "taglineEnd": "I'm ready when you are.",
+    "form": {
+      "nameLabel": "NAME",
+      "namePlaceholder": "user",
+      "emailLabel": "EMAIL",
+      "emailPlaceholder": "user@domain.com",
+      "contentLabel": "CONTENT",
+      "contentPlaceholder": "message",
+      "submit": "SEND MESSAGE"
+    },
+    "notifications": {
+      "success": "Message sent with success.",
+      "error": "Something failed, please try again later"
+    }
+  },
+  "footer": {
+    "rights": "2026 // ALL RIGHTS RESERVED",
+    "sourceCode": "SOURCE CODE"
   }
 }
