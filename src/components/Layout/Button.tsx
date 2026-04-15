@@ -7,10 +7,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        emphasis:
-          "bg-primary text-background border-primary border hover:scanlines",
+        emphasis: "bg-primary text-background hover:bg-primary/80",
         outline:
-          "text-primary bg-background border border-primary hover:scanlines",
+          "text-primary bg-background ring-2 ring-inset ring-primary hover:ring-primary/80 hover:text-primary/80",
       },
     },
     defaultVariants: {

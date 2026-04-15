@@ -8,11 +8,11 @@ type ExperienceProps = {
 
 export const Experience = ({ experience }: ExperienceProps) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 xl:gap-20 lg:flex-row experience-item">
       <ExperienceTime experience={experience} />
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 flex-2">
         <div className="flex flex-col gap-2">
-          <span className="text-offwhite uppercase font-semibold text-2xl font-mono">
+          <span className="text-offwhite uppercase font-semibold text-2xl font-mono lg:leading-6">
             {experience.position} // {experience.company}
           </span>
           <div className="flex items-center gap-2 text-primary/80 font-bold">
@@ -37,14 +37,17 @@ export const Experience = ({ experience }: ExperienceProps) => {
   );
 };
 
-const experienceTimeVariants = cva("flex-1 flex gap-2 font-mono text-sm", {
-  variants: {
-    status: {
-      active: "",
-      inactive: "text-offwhite/50",
+const experienceTimeVariants = cva(
+  "flex-auto min-w-max flex gap-2 font-mono text-sm lg:max-w-50 xl:max-w-60",
+  {
+    variants: {
+      status: {
+        active: "",
+        inactive: "text-offwhite/50",
+      },
     },
   },
-});
+);
 
 type ExperienceTimeProps = {
   experience: ExperienceType;

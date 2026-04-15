@@ -12,14 +12,16 @@ export const Intro = () => {
       <span className="text-sm mb-6 tracking-huge text-primary leading-none ml-2 inline-block">
         AMAURI BECHTOLD JUNIOR
       </span>
-      <div className="text-offwhite text-6xl sm:text-7xl font-display leading-none flex flex-col">
+      <div className="text-offwhite text-6xl sm:text-7xl xl:text-8xl font-display leading-none flex flex-col">
         <span>{t("hero.title.build")}</span>
         <span className="text-primary">{t("hero.title.scale")}</span>
         <span>{t("hero.title.impact")}</span>
       </div>
       <div className="flex gap-6 my-8 items-center ml-2">
         <div className="w-16 md:w-40 h-1 md:g-1.5 bg-primary" />
-        <span className="tracking-huge text-base">{t("hero.jobTitle")}</span>
+        <span className="tracking-huge text-base flex-auto">
+          {t("hero.jobTitle")}
+        </span>
       </div>
       <div className="flex items-center gap-4 ml-2">
         <a href={resumePdf} download="Amauri Bechtold Junior - Resume.pdf">

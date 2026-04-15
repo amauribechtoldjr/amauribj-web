@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* ─── Colors: Core ─── */
+  /* Colors */
   --color-primary: #ea580c;
   --color-off-primary: #7c2d12;
   --color-background: #080808;
   --color-secondary: #1b1b1b;
   --color-offwhite: #e2e2e2;
 
-  /* ─── Fonts ─── */
+  /* Fonts */
   --font-display: "Rubik Mono One", monospace;
   --font-body: "Inter", sans-serif;
   --font-mono: "Oswald", sans-serif;
@@ -16,12 +16,12 @@
   --tracking-huge: 0.2em;
 }
 
-/* ─── Base Styles ─── */
+/* Base Styles */
 body {
   margin: 0;
   padding: 0;
 
-  @apply text-xs sm:text-sm;
+  @apply text-xs sm:text-sm lg:text-base;
 }
 
 html {
@@ -30,37 +30,7 @@ html {
   @apply min-h-screen font-body text-primary bg-background;
 }
 
-/* TODO: remove scanlines from all buttons */
-
-/* ─── Scanline Overlay Utility ─── */
-@utility scanlines {
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: repeating-linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.7) 0px,
-      rgba(0, 0, 0, 0.7) 2px,
-      transparent 2px,
-      transparent 4px
-    );
-    background-size: 100% 4px;
-    animation: scanline-scroll 1.5s linear infinite;
-  }
-}
-
-@keyframes scanline-scroll {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 4px;
-  }
-}
-
-/* ─── Cyberpunk Broken Light Utility ─── */
+/* Cyberpunk Broken Light Utility */
 @utility cyber-flicker {
   animation: cyber-flicker 4s step-end infinite;
 }

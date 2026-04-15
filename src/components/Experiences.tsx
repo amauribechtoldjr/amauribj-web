@@ -84,6 +84,7 @@ export const Experiences = () => {
         t("experience.companies.eureca.description1"),
         t("experience.companies.eureca.description2"),
       ],
+      remote: true,
     },
     {
       firstYear: t("experience.companies.linx.firstYear"),
@@ -107,18 +108,19 @@ export const Experiences = () => {
   ];
 
   return (
-    <section className="p-10 sm:p-16">
-      <div className="mb-20">
-        <span className="text-primary text-4xl sm:text-5xl font-display">
+    <section className="p-10 sm:p-16 lg:py-32 xl:p-40 flex flex-col xl:justify-center xl:items-center">
+      <div className="flex flex-col xl:max-w-300">
+        <span className="mb-20 lg:mb-32 xl:mb-40 text-primary text-4xl sm:text-5xl lg:text-6xl font-display flex-1 ">
           {t("experience.title")}
         </span>
-      </div>
-      <div className="flex flex-col gap-20" ref={container}>
-        {experiences.map((exp, index) => (
-          <div className="experience-item" key={index}>
-            <Experience experience={exp} />
-          </div>
-        ))}
+        <div
+          className="flex-1 flex flex-col gap-20 justify-center"
+          ref={container}
+        >
+          {experiences.map((exp, index) => (
+            <Experience experience={exp} key={index} />
+          ))}
+        </div>
       </div>
     </section>
   );

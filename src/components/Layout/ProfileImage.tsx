@@ -2,7 +2,7 @@ import amauriBj from "/profile.png";
 
 export const ProfileImage = () => {
   return (
-    <div className="border border-primary/20 p-2 min-w-0 relative cursor-default w-80 h-100 sm:w-90 sm:h-110">
+    <div className="border border-primary/20 p-2 min-w-0 relative cursor-default w-80 h-100 sm:w-90 sm:h-110 md:w-110 md:h-120 lg:w-90 lg:h-110">
       <img
         src={amauriBj}
         alt="Profile"
