@@ -14,6 +14,8 @@ type SendEmailProps = {
   onSuccess?: () => void;
 };
 
+// TODO: change EmailJS template messages
+
 export const useEmail = () => {
   const [status, setStatus] = useState<EmailStatus>("idle");
 
