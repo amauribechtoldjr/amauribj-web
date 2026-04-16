@@ -1,4 +1,4 @@
-# amauribj-web
+# amauribj.com
 
 Personal developer portfolio, skills, experiences and contact.
 
