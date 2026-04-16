@@ -30,7 +30,6 @@ html {
   @apply min-h-screen font-body text-primary bg-background;
 }
 
-/* Cyberpunk Broken Light Utility */
 @utility cyber-flicker {
   animation: cyber-flicker 4s step-end infinite;
 }
