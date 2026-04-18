@@ -12,7 +12,7 @@ export const Intro = () => {
       <span className="text-sm mb-6 tracking-huge text-primary leading-none ml-2 inline-block">
         AMAURI BECHTOLD JUNIOR
       </span>
-      <div className="text-offwhite text-6xl sm:text-7xl xl:text-8xl font-display leading-none flex flex-col">
+      <div className="text-offwhite text-5xl sm:text-7xl font-display leading-none flex flex-col">
         <span>{t("hero.title.build")}</span>
         <span className="text-primary">{t("hero.title.scale")}</span>
         <span>{t("hero.title.impact")}</span>

@@ -51,7 +51,8 @@
         "django": "Django",
         "postgresql": "PostgreSQL",
         "mysql": "MySQL",
-        "restAPI": "REST API"
+        "restAPI": "REST API",
+        "systemDesign": "Arquitetura de software"
       },
       "tools": {
         "title": "INFRA & FERRAMENTAS",
@@ -61,8 +62,7 @@
         "ciCd": "CI/CD",
         "testing": "Testes",
         "datadog": "Datadog",
-        "optimization": "Otimizações",
-        "designSystem": "Arquitetura de software"
+        "optimization": "Otimizações"
       }
     }
   },

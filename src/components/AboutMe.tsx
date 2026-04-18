@@ -118,6 +118,7 @@ export const AboutMe = () => {
               <span>{t("aboutMe.skills.backend.postgresql")}</span>
               <span>{t("aboutMe.skills.backend.mysql")}</span>
               <span>{t("aboutMe.skills.backend.restAPI")}</span>
+              <span>{t("aboutMe.skills.backend.systemDesign")}</span>
             </SkillList>
           </SkillItem>
           <SkillItem>
@@ -130,7 +131,6 @@ export const AboutMe = () => {
               <span>{t("aboutMe.skills.tools.testing")}</span>
               <span>{t("aboutMe.skills.tools.datadog")}</span>
               <span>{t("aboutMe.skills.tools.optimization")}</span>
-              <span>{t("aboutMe.skills.tools.designSystem")}</span>
             </SkillList>
           </SkillItem>
         </div>
